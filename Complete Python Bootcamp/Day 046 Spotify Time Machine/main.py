@@ -53,7 +53,6 @@ def get_playlist():
     spotify_id = os.getenv('spotify_id')
     spotify_secret = os.getenv('spotify_id')
     redirect_uri = 'http://example.com'
-    user_id = '31zrouhyfechsm4tfi4frxlu5qb4'
     sp = spotipy.Spotify(
         auth_manager=SpotifyOAuth(client_id=spotify_id, client_secret=spotify_secret, redirect_uri=redirect_uri,
                                   show_dialog=True, cache_path='token.txt', username='Chase Carter', scope='playlist-modify-private'))
