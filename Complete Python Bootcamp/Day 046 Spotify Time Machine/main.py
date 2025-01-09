@@ -13,6 +13,7 @@ import re
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import webbrowser
+import os
 
 #Configure GUI. This is an extremely rough GUI, and could use much improvement
 window = tkinter.Tk()
@@ -49,8 +50,8 @@ def get_playlist():
 
 
     #Connect to Spotify
-    spotify_id = '30140c23bc9b4555907f2341e5680e5a'
-    spotify_secret = '82cc8534ac874dd8b8c9780fd26d9d47'
+    spotify_id = os.getenv('spotify_id')
+    spotify_secret = os.getenv('spotify_id')
     redirect_uri = 'http://example.com'
     user_id = '31zrouhyfechsm4tfi4frxlu5qb4'
     sp = spotipy.Spotify(
