@@ -1,5 +1,6 @@
 # Import necessary modules
 import os
+import imghdr
 from dotenv import load_dotenv
 import tweepy
 from atproto import Client, client_utils
@@ -115,4 +116,4 @@ try:
     response = requests.post(url=publish_url, headers=headers, params=publish_params)
     print(response.json())
 except Exception as error:
-    error_report("Threads", repr(error))
+    error_report("Threads", repr(error))# Import necessary modules
