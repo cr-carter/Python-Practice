@@ -4,7 +4,6 @@ while also incorporating the use of bootstrap in the html code.
 '''
 from flask import Flask, render_template
 import requests
-from post import Post
 
 blog_posts = requests.get(url="https://api.npoint.io/76876931baa729e5bb68").json()
 
