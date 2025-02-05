@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Restaurants{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>All Cafes</h1>
+
+	  <table class="table table-dark table-striped table-hover">
+
+          {% for entry in cafes %}
+            <tr>
+                <th>{{ entry[0] }}</th>
+                <th><a href="{{ entry[1] }}">Map Link</a></th>
+                <th>{{ entry[2] }}</th>
+                <th>{{ entry[3] }}</th>
+                <th>{{ entry[4] }}</th>
+                <th>{{ entry[5] }}</th>
+                <th>{{ entry[6] }}</th>
+            </tr>
+          {% endfor %}
+  	  </table>
+
+      <p><a href="{{ url_for('home') }}">Return to index page</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
